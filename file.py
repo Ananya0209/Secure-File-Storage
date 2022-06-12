@@ -10,9 +10,7 @@ def openFile():
     
 def openFiles():
     filepath = filedialog.askopenfilenames()
-    file_list = list(filepath)
-    print(file_list)
-    
+return(filepath)    
 
 
 window = Tk()

@@ -17,6 +17,7 @@ def AESGCM_encrypt(plaintext):
     key = AESGCM.generate_key(bit_length=128)    #128-bit key
     aesgcm = AESGCM(key)
     ciphertext = aesgcm.encrypt(iv, plaintext, aad)
+
     return ciphertext, iv, key
 
 def decrypt(ciphertext,key,iv):
@@ -24,7 +25,6 @@ def decrypt(ciphertext,key,iv):
     aesgcm = AESGCM(key)
     plaintext = aesgcm.decrypt(iv, ciphertext, aad) 
     return plaintext
-
 
 
 
